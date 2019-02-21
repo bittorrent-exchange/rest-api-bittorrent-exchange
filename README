@@ -1,0 +1,22 @@
+Welcome to bittorrent-exchange developer documentation. Please note that the current version of this document is v3 and it will be updated regularly. Traders are advised to check this document from time to time for latest updates.
+
+Bittorrent-exchange offers powerful APIs for you to tailor to your needs with different permissions. There are three categories: account, trading, and market trends. After creating an account on bittorrent-exchange, developers can create APIs of different permissions according to their needs and perform automated trading as well as withdrawal. Our API trading permissions enable you to instantly capture market trends and trade, check available and locked balance, view pending orders, buy, sell, and cancel orders. All market data endpoints are public.
+Instructions
+
+If a developer would like to request the API, please subscribe to our v3 API key via this link. API trading instructions and settings are all included in this document. Should you encounter any problems during your use of the API or have any suggestions for improvement, please feel free to contact us.
+Endpoints Configurations
+
+bittorrent-exchange offers two types of endpoints, developers may select either one to suit their needs of viewing market data, trading, or withdrawal. Refer to SDK(Please see here for details)
+REST API
+
+REST, Representational State Transfer, is one of the most used architectural style for creating web services, as its framework is clear, standardized, user-friendly, and scalable. It also has the following advantages:
+
+    Under the RESTful framework, each URL represents a kind of resource;
+    The representational state of transferring the resource between client and server;
+    Actualization of REST by using 4 HTTP instructions from the client to operate the resources in the server. We highly recommend developers to use REST API to perform spot trading and withdrawal.
+
+WebSocket API
+
+WebSocket is a new Protocol of HTML5. It achieved full-duplex data transmission between the client and the server, allowing data to transmit effectively in both directions. Through only one simple handshake, the connection between the client and the server is established, and the server can push information to the client according to the business rules.
+
+WebSocket API in developing.
