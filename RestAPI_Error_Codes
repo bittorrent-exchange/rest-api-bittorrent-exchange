@@ -1,0 +1,102 @@
+This is RestAPI Error Codes.
+
+Common Error Codes
+
+Error codes of v2 API start from 30000.
+
+Common error codes include the signatures and error codes of all business lines.
+Error Message 	Error Codes 	http Status Code
+request header "ACCESS_KEY" cannot be blank 	30001 	400
+request header "ACCESS_SIGN" cannot be blank 	30002 	400
+request header "ACCESS_TIMESTAMP" cannot be blank 	30003 	400
+request header "ACCESS_PASSPHRASE" cannot be blank 	30004 	400
+invalid ACCESS_TIMESTAMP 	30005 	400
+invalid ACCESS_KEY 	30006 	400
+invalid Content_Type, please use "application/json" format 	30007 	400
+timestamp request expired 	30008 	400
+system error 	30009 	500
+API validation failed 	30010 	401
+invalid IP 	30011 	400
+invalid authorization 	30012 	401
+invalid sign 	30013 	401
+request too frequent 	30014 	429
+request header "ACCESS_PASSPHRASE" incorrect 	30015 	400
+apikey's broker id does not match 	30017 	400
+apikey's domain does not match 	30018 	400
+
+Description 	Error Codes 	http Status Code 	Scenarios
+body cannot be blank 	30020 	400 	body cannot be blank
+json data format error 	30021 	400 	json data format error
+{0} parameter cannot be blank; required parameter cannot be blank 	30023 	400 	parameters returned respectively
+{0} parameter value error 	30024 	400 	parameters returned respectively
+{0} parameter category error 	30025 	400 	parameter category error
+requested too frequent; endpoint limit exceeded 	30026 	429 	requested too frequent; endpoint limit exceeded
+login failure 	30027 	401 	operating orders of other users
+unauthorized execution 	30028 	400 	unauthorized execution
+account suspended 	30029 	400 	account suspended
+endpoint request failed. Please try again 	30030 	400 	endpoint request failed. Please try again
+token does not exist 	30031 	400 	token requested does not exist
+pair does not exist 	30032 	400 	pair requested does not exist
+exchange domain does not exist 	30033 	400 	the error returned when the exchange for the apikey validation is not filled
+exchange ID does not exist 	30034 	400 	the error returned when the exchange ID for the apikey validation is not filled
+trading is not supported in this website 	30035 	400 	the error returned when the exchange is closed
+no relevant data 	30036 	400 	no relevant data when enquiring the endpoint
+user does not exist 	30038 	400 	user does not exist
+endpoint is offline or unavailable 	30037 	400 	endpoint is offline or unavailable
+successful 	0 	200 	when the order placement / cancellation / operation is successful
+
+
+Token and margin error codes
+Error Messages 	Error Codes 	http Status Code 	Scenarios
+margin account for this pair is not enabled yet 	33001 	400 	the service must be enabled before trading
+margin account for this pair is suspended 	33002 	400 	margin account suspended
+no loan balance 	33003 	400 	insufficient balance for loan
+loan amount cannot be smaller than the minimum limit 	33004 	400 	minimum loan amount limit not reached
+repayment amount must exceed 0 	33005 	400 	invalid repayment amount
+loan order not found 	33006 	400 	loan order not found
+status not found 	33007 	400 	status unchanged
+loan amount cannot exceed the maximum limit 	33008 	400 	invalid loan amount
+user ID is blank 	33009 	400 	user ID not provided
+you cannot cancel an order during session 2 of call auction 	33010 	400 	order cancellation not allowed during call auction
+no new market data 	33011 	400 	no market data
+order cancellation failed 	33012 	400 	order cancellation failed
+order placement failed 	33013 	400 	order placement failed
+order does not exist 	33014 	400 	order canceled already. Invalid order number
+exceeded maximum limit 	33015 	400 	exceeded maximum limit during multiple-order placement
+margin trading is not open for this token 	33016 	400 	insufficient balance for order placement
+insufficient balance 	33017 	400 	margin trading not supported for this pair
+this parameter must be smaller than 1 	33018 	400 	invalid parameter for getting market data
+request not supported 	33020 	400 	margin trading not supported for some exchanges
+token and the pair do not match 	33021 	400 	incorrect token for the token pair during repayment
+pair and the order do not match 	33022 	400 	incorrect token for the order during repayment
+you can only place market orders during call auction 	33023 	400 	you can only place market orders during call auction
+trading amount too small 	33024 	400 	invalid trading amount
+base token amount is blank 	33025 	400 	settings not completed during order placement
+transaction completed 	33026 	400 	cancel limited when the transaction completed
+cancelled order or order cancelling 	33027 	400 	cancel limited when the order is cancelling or cancelled
+the decimal places of the trading price exceeded the limit 	33028 	400 	order endpoint: The decimal places of the trading price exceeded the limit
+the decimal places of the trading size exceeded the limit 	33029 	400 	order endpoint::The decimal places of the trading size exceeded the limit
+Wallet error codes
+Error Messages 	Error Codes 	http Status Code 	Scenarios
+withdrawal suspended 	34001 	400 	withdrawal endpoint: account suspended
+please add a withdrawal address 	34002 	400 	withdrawal endpoint: address required
+sorry, this token cannot be withdrawn to xx at the moment 	34003 	400 	withdrawal endpoint: incorrect address
+withdrawal fee is smaller than minimum limit 	34004 	400 	withdrawal endpoint: incorrect fee
+withdrawal fee exceeds the maximum limit 	34005 	400 	withdrawal endpoint: incorrect withdrawal fee
+withdrawal amount is lower than the minimum limit 	34006 	400 	minimum withdrawal amount%} endpoint: incorrect amount
+withdrawal amount exceeds the maximum limit 	34007 	400 	maximum withdrawal amount endpoint: incorrect amount
+insufficient balance 	34008 	400 	transfer & withdrawal endpoint: insufficient balance
+your withdrawal amount exceeds the daily limit 	34009 	400 	withdrawal endpoint: withdrawal limit exceeded
+transfer amount must be larger than 0 	34010 	400 	transfer endpoint: incorrect amount
+conditions not met 	34011 	400 	transfer & withdrawal endpoint: conditions not met, e.g. KYC level
+the minimum withdrawal amount for NEO is 1, and the amount must be an integer 	34012 	400 	withdrawal endpoint: special requirements
+please transfer 	34013 	400 	transfer endpoint: Token margin trading instrument ID required
+transfer limited 	34014 	400 	transfer endpoint：Transfer limited
+subaccount does not exist 	34015 	400 	transfer endpoint: subaccount does not exist
+transfer suspended 	34016 	400 	transfer endpoint: either end of the account does not authorize the transfer
+account suspended 	34017 	400 	transfer & withdrawal endpoint: either end of the account does not authorize the transfer
+incorrect trades password 	34018 	400 	incorrect trades password
+please bind your email before withdrawal 	34019 	400 	withdrawal endpoint : email required
+please bind your funds password before withdrawal 	34020 	400 	withdrawal endpoint : funds password required
+Not verified address 	34021 	400 	withdrawal endpoint
+Withdrawals are not available for sub accounts 	34022 	400 	withdrawal endpoint
