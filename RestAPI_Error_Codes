@@ -4,7 +4,7 @@ Common Error Codes
 Error Message                                            Error Codes       http Status Code
 
 system error                                             10009             500
-API validation failed                                    10010          	 401
+API validation failed                                    10010             401
 invalid IP                                               10011             400
 invalid authorization                                    10012             401
 invalid sign                                             10013             401
